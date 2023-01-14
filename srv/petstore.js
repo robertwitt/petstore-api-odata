@@ -43,4 +43,16 @@ module.exports = async (srv) => {
     });
     return toPet(pet);
   });
+
+  srv.on("UPDATE", Pets, async (req) => {
+    let pet = await remoteSrv.send("pet_", { petId: req.data.id });
+    pet = await remoteSrv.send("pet_put", {
+      body: {
+        id: req.data.id,
+        name: req.data.name ?? pet.name,
+        status: req.data.status ?? pet.status,
+      },
+    });
+    return toPet(pet);
+  });
 };
