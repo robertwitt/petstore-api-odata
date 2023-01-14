@@ -5,10 +5,10 @@ function toPet(data) {
 }
 
 module.exports = async (srv) => {
+  const remoteSrv = await cds.connect.to("Petstore");
   const { Pets } = srv.entities;
 
   srv.on("READ", Pets, async (req) => {
-    const remoteSrv = await cds.connect.to("Petstore");
     const ref = req.query.SELECT.from.ref[0];
     if (typeof ref !== "string") {
       // By id
@@ -32,5 +32,15 @@ module.exports = async (srv) => {
       status: [petStatus],
     });
     return pets.map(toPet);
+  });
+
+  srv.on("CREATE", Pets, async (req) => {
+    const pet = await remoteSrv.send("pet_post", {
+      body: {
+        name: req.data.name,
+        status: "available",
+      },
+    });
+    return toPet(pet);
   });
 };

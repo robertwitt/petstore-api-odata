@@ -16,6 +16,8 @@ service PetstoreService {
   entity Pets {
     key id     : Integer64;
         name   : String;
+
+        @readonly
         status : String enum {
           available;
           pending;
