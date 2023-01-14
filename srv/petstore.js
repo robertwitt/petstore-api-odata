@@ -55,4 +55,9 @@ module.exports = async (srv) => {
     });
     return toPet(pet);
   });
+
+  srv.on("DELETE", Pets, async (req) => {
+    const petId = req.data.id;
+    await remoteSrv.send("pet__delete", { petId });
+  });
 };
