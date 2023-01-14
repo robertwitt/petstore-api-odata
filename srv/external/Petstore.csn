@@ -1,6 +1,6 @@
 {
   "definitions": {
-    "Swagger.Petstore": {
+    "Petstore": {
       "kind": "service",
       "@Capabilities.BatchSupported": false,
       "@Capabilities.KeyAsSegmentSupported": true,
@@ -8,7 +8,7 @@
       "@Core.SchemaVersion": "1.0.6",
       "@Core.LongDescription": "This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."
     },
-    "Swagger.Petstore.pet_": {
+    "Petstore.pet_": {
       "kind": "function",
       "params": {
         "petId": {
@@ -22,10 +22,10 @@
       "@Core.LongDescription": "Returns a single pet",
       "@openapi.path": "/pet/{petId}",
       "returns": {
-        "type": "Swagger.Petstore_types.Pet"
+        "type": "Petstore_types.Pet"
       }
     },
-    "Swagger.Petstore.pet__post": {
+    "Petstore.pet__post": {
       "kind": "action",
       "params": {
         "petId": {
@@ -48,7 +48,7 @@
       "@Core.Description": "Updates a pet in the store with form data",
       "@openapi.path": "/pet/{petId}"
     },
-    "Swagger.Petstore.pet__delete": {
+    "Petstore.pet__delete": {
       "kind": "action",
       "params": {
         "api_key": {
@@ -66,7 +66,7 @@
       "@openapi.method": "DELETE",
       "@openapi.path": "/pet/{petId}"
     },
-    "Swagger.Petstore.pet__uploadImage_post": {
+    "Petstore.pet__uploadImage_post": {
       "kind": "action",
       "params": {
         "petId": {
@@ -89,14 +89,14 @@
       "@Core.Description": "uploads an image",
       "@openapi.path": "/pet/{petId}/uploadImage",
       "returns": {
-        "type": "Swagger.Petstore_types.ApiResponse"
+        "type": "Petstore_types.ApiResponse"
       }
     },
-    "Swagger.Petstore.pet_post": {
+    "Petstore.pet_post": {
       "kind": "action",
       "params": {
         "body": {
-          "type": "Swagger.Petstore_types.Pet",
+          "type": "Petstore_types.Pet",
           "@openapi.in": "body"
         }
       },
@@ -104,11 +104,11 @@
       "@Core.Description": "Add a new pet to the store",
       "@openapi.path": "/pet"
     },
-    "Swagger.Petstore.pet_put": {
+    "Petstore.pet_put": {
       "kind": "action",
       "params": {
         "body": {
-          "type": "Swagger.Petstore_types.Pet",
+          "type": "Petstore_types.Pet",
           "@openapi.in": "body"
         }
       },
@@ -117,13 +117,13 @@
       "@openapi.method": "PUT",
       "@openapi.path": "/pet"
     },
-    "Swagger.Petstore.pet_findByStatus": {
+    "Petstore.pet_findByStatus": {
       "kind": "function",
       "params": {
         "status": {
           "@description": "Status values that need to be considered for filter",
           "items": {
-            "type": "Swagger.Petstore.anonymous.type0"
+            "type": "Petstore.anonymous.type0"
           },
           "@openapi.in": "query",
           "@openapi.required": true
@@ -135,11 +135,11 @@
       "@openapi.path": "/pet/findByStatus",
       "returns": {
         "items": {
-          "type": "Swagger.Petstore_types.Pet"
+          "type": "Petstore_types.Pet"
         }
       }
     },
-    "Swagger.Petstore.pet_findByTags": {
+    "Petstore.pet_findByTags": {
       "kind": "function",
       "params": {
         "tags": {
@@ -157,11 +157,11 @@
       "@openapi.path": "/pet/findByTags",
       "returns": {
         "items": {
-          "type": "Swagger.Petstore_types.Pet"
+          "type": "Petstore_types.Pet"
         }
       }
     },
-    "Swagger.Petstore.store_inventory": {
+    "Petstore.store_inventory": {
       "kind": "function",
       "params": {},
       "@Common.Label": "store",
@@ -172,7 +172,7 @@
         "elements": {}
       }
     },
-    "Swagger.Petstore.store_order_": {
+    "Petstore.store_order_": {
       "kind": "function",
       "params": {
         "orderId": {
@@ -186,10 +186,10 @@
       "@Core.LongDescription": "For valid response try integer IDs with value >= 1 and <= 10. Other values will generated exceptions",
       "@openapi.path": "/store/order/{orderId}",
       "returns": {
-        "type": "Swagger.Petstore_types.Order"
+        "type": "Petstore_types.Order"
       }
     },
-    "Swagger.Petstore.store_order__delete": {
+    "Petstore.store_order__delete": {
       "kind": "action",
       "params": {
         "orderId": {
@@ -204,11 +204,11 @@
       "@openapi.method": "DELETE",
       "@openapi.path": "/store/order/{orderId}"
     },
-    "Swagger.Petstore.store_order_post": {
+    "Petstore.store_order_post": {
       "kind": "action",
       "params": {
         "body": {
-          "type": "Swagger.Petstore_types.Order",
+          "type": "Petstore_types.Order",
           "@openapi.in": "body"
         }
       },
@@ -216,10 +216,10 @@
       "@Core.Description": "Place an order for a pet",
       "@openapi.path": "/store/order",
       "returns": {
-        "type": "Swagger.Petstore_types.Order"
+        "type": "Petstore_types.Order"
       }
     },
-    "Swagger.Petstore.user_": {
+    "Petstore.user_": {
       "kind": "function",
       "params": {
         "username": {
@@ -232,10 +232,10 @@
       "@Core.Description": "Get user by user name",
       "@openapi.path": "/user/{username}",
       "returns": {
-        "type": "Swagger.Petstore_types.User"
+        "type": "Petstore_types.User"
       }
     },
-    "Swagger.Petstore.user__put": {
+    "Petstore.user__put": {
       "kind": "action",
       "params": {
         "username": {
@@ -244,7 +244,7 @@
           "@openapi.in": "path"
         },
         "body": {
-          "type": "Swagger.Petstore_types.User",
+          "type": "Petstore_types.User",
           "@openapi.in": "body"
         }
       },
@@ -254,7 +254,7 @@
       "@openapi.method": "PUT",
       "@openapi.path": "/user/{username}"
     },
-    "Swagger.Petstore.user__delete": {
+    "Petstore.user__delete": {
       "kind": "action",
       "params": {
         "username": {
@@ -269,11 +269,11 @@
       "@openapi.method": "DELETE",
       "@openapi.path": "/user/{username}"
     },
-    "Swagger.Petstore.user_post": {
+    "Petstore.user_post": {
       "kind": "action",
       "params": {
         "body": {
-          "type": "Swagger.Petstore_types.User",
+          "type": "Petstore_types.User",
           "@openapi.in": "body"
         }
       },
@@ -282,12 +282,12 @@
       "@Core.LongDescription": "This can only be done by the logged in user.",
       "@openapi.path": "/user"
     },
-    "Swagger.Petstore.user_createWithArray_post": {
+    "Petstore.user_createWithArray_post": {
       "kind": "action",
       "params": {
         "body": {
           "items": {
-            "type": "Swagger.Petstore_types.User"
+            "type": "Petstore_types.User"
           },
           "@openapi.in": "body"
         }
@@ -296,12 +296,12 @@
       "@Core.Description": "Creates list of users with given input array",
       "@openapi.path": "/user/createWithArray"
     },
-    "Swagger.Petstore.user_createWithList_post": {
+    "Petstore.user_createWithList_post": {
       "kind": "action",
       "params": {
         "body": {
           "items": {
-            "type": "Swagger.Petstore_types.User"
+            "type": "Petstore_types.User"
           },
           "@openapi.in": "body"
         }
@@ -310,7 +310,7 @@
       "@Core.Description": "Creates list of users with given input array",
       "@openapi.path": "/user/createWithList"
     },
-    "Swagger.Petstore.user_login": {
+    "Petstore.user_login": {
       "kind": "function",
       "params": {
         "username": {
@@ -333,7 +333,7 @@
         "type": "cds.String"
       }
     },
-    "Swagger.Petstore.user_logout": {
+    "Petstore.user_logout": {
       "kind": "function",
       "params": {},
       "@Common.Label": "user",
@@ -343,7 +343,7 @@
         "type": "cds.Boolean"
       }
     },
-    "Swagger.Petstore_types.Category": {
+    "Petstore_types.Category": {
       "elements": {
         "id": {
           "type": "cds.Integer64"
@@ -354,13 +354,13 @@
       },
       "kind": "type"
     },
-    "Swagger.Petstore_types.Pet": {
+    "Petstore_types.Pet": {
       "elements": {
         "id": {
           "type": "cds.Integer64"
         },
         "category": {
-          "type": "Swagger.Petstore_types.Category"
+          "type": "Petstore_types.Category"
         },
         "name": {
           "type": "cds.String",
@@ -374,7 +374,7 @@
         },
         "tags": {
           "items": {
-            "type": "Swagger.Petstore_types.Tag"
+            "type": "Petstore_types.Tag"
           }
         },
         "status": {
@@ -390,7 +390,7 @@
       },
       "kind": "type"
     },
-    "Swagger.Petstore_types.Tag": {
+    "Petstore_types.Tag": {
       "elements": {
         "id": {
           "type": "cds.Integer64"
@@ -401,7 +401,7 @@
       },
       "kind": "type"
     },
-    "Swagger.Petstore_types.ApiResponse": {
+    "Petstore_types.ApiResponse": {
       "elements": {
         "code": {
           "type": "cds.Integer"
@@ -415,7 +415,7 @@
       },
       "kind": "type"
     },
-    "Swagger.Petstore_types.Order": {
+    "Petstore_types.Order": {
       "elements": {
         "id": {
           "type": "cds.Integer64"
@@ -445,7 +445,7 @@
       },
       "kind": "type"
     },
-    "Swagger.Petstore_types.User": {
+    "Petstore_types.User": {
       "elements": {
         "id": {
           "type": "cds.Integer64"
@@ -475,7 +475,7 @@
       },
       "kind": "type"
     },
-    "Swagger.Petstore.anonymous.type0": {
+    "Petstore.anonymous.type0": {
       "type": "cds.String",
       "@assert.range": true,
       "enum": {
