@@ -38,7 +38,7 @@ module.exports = async (srv) => {
     const pet = await remoteSrv.send("pet_post", {
       body: {
         name: req.data.name,
-        status: "available",
+        status: req.data.status ?? "available",
       },
     });
     return toPet(pet);

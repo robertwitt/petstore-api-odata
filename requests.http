@@ -1,0 +1,28 @@
+### Find pet by status
+GET http://localhost:4004/petstore/Pets?$filter=status%20eq%20%27available%27 HTTP/1.1
+###
+
+### Get pet by ID
+GET http://localhost:4004/petstore/Pets(9223372036854684000) HTTP/1.1
+###
+
+### Create a new pet
+POST http://localhost:4004/petstore/Pets HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Lassy"
+}
+
+### Update a pet
+PATCH http://localhost:4004/petstore/Pets(1) HTTP/1.1
+Content-Type: application/json
+
+{
+  "status": "sold"
+}
+###
+
+### Delete a pet
+DELETE http://localhost:4004/petstore/Pets(1) HTTP/1.1
+###
