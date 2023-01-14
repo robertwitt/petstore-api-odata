@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^6",
+    "cap-remote-service-rest": "^0.1.0",
     "express": "^4"
   },
   "devDependencies": {
@@ -14,5 +15,14 @@
   },
   "scripts": {
     "start": "cds run"
+  },
+  "cds": {
+    "requires": {
+      "Swagger.Petstore": {
+        "kind": "rest",
+        "model": "srv/external/Petstore",
+        "impl": "srv/external/Petstore.js"
+      }
+    }
   }
 }
