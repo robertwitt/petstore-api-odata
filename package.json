@@ -1,8 +1,11 @@
 {
   "name": "petstore-api-odata",
   "version": "1.0.0",
-  "description": "A simple CAP project.",
-  "repository": "<Add your repository here>",
+  "description": "OData Facade for Petstore REST API",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertwitt/petstore-api-odata.git"
+  },
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
